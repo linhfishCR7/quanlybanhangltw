@@ -1,3 +1,7 @@
+<?php
+// 1. Include file cấu hình kết nối đến database, khởi tạo kết nối $conn
+include_once(__DIR__ . '/config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,145 +52,188 @@
 
                 </div>
                 <div class="col-md-8">
+               
                     <h1 class=" text-gradient">HOA HỒNG</h1>
                     <hr>
                     <div class="row">
-                        <div class="col-md-3 col-sm-12 col-lg-3">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Avatar" style="width:190px;height:250px;">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <h1>John Doe</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
+                        <?php
+                        $sql = "SELECT nhh.*,hh.* FROM `nhomhanghoa` nhh JOIN `hanghoa` hh ON hh.MaNhom = nhh.MaNhom WHERE nhh.MaNhom='NDH01' ";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                        ?>
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+
+                                        <div class="flip-card-front">
+                                            <img src="<?php echo $row['Hinh']; ?>" alt="Avatar" style="width:190px;height:250px;">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1><?php echo $row['TenHH']; ?></h1>
+                                            <p><?php echo $row['MaNhom']; ?></p>
+                                            <p><?php echo $row['Gia']; ?></p>
+                                            <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php?MSHH=<?php echo $row['MSHH']; ?>"><i class="fa fa-shopping-cart"></i></a></button>
+
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-lg-3">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Avatar" style="width:190px;height:250px;">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <h1>John Doe</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-lg-3">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Avatar" style="width:190px;height:250px;">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <h1>John Doe</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-lg-3">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Avatar" style="width:190px;height:250px;">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <h1>John Doe</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        <?php
+                        } ?>
 
                     </div><br><br>
-                    <h1 class=" text-gradient">HOA LYLY</h1>
+
+                    <h1 class=" text-gradient">HOA LY LY</h1>
                     <hr>
                     <div class="row">
-                        <div class="col-md-3 col-sm-12 col-lg-3">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Avatar" style="width:190px;height:250px;">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <h1>John Doe</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
+                        <?php
+                        $sql = "SELECT nhh.*,hh.* FROM `nhomhanghoa` nhh JOIN `hanghoa` hh ON hh.MaNhom = nhh.MaNhom WHERE nhh.MaNhom='NDH02' ";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                        ?>
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+
+                                        <div class="flip-card-front">
+                                            <img src="<?php echo $row['Hinh']; ?>" alt="Avatar" style="width:190px;height:250px;">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1><?php echo $row['TenHH']; ?></h1>
+                                            <p><?php echo $row['MaNhom']; ?></p>
+                                            <p><?php echo $row['Gia']; ?></p>
+                                            <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php?MSHH=<?php echo $row['MSHH']; ?>"><i class="fa fa-shopping-cart"></i></a></button>
+
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-lg-3">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Avatar" style="width:190px;height:250px;">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <h1>John Doe</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
+                        <?php
+                        } ?>
+
+                    </div><br><br>
+                    <h1 class=" text-gradient">HOA CÚC</h1>
+                    <hr>
+                    <div class="row">
+                        <?php
+                        $sql = "SELECT nhh.*,hh.* FROM `nhomhanghoa` nhh JOIN `hanghoa` hh ON hh.MaNhom = nhh.MaNhom WHERE nhh.MaNhom='NDH03' ";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                        ?>
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+
+                                        <div class="flip-card-front">
+                                            <img src="<?php echo $row['Hinh']; ?>" alt="Avatar" style="width:190px;height:250px;">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1><?php echo $row['TenHH']; ?></h1>
+                                            <p><?php echo $row['MaNhom']; ?></p>
+                                            <p><?php echo $row['Gia']; ?></p>
+                                            <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php?MSHH=<?php echo $row['MSHH']; ?>"><i class="fa fa-shopping-cart"></i></a></button>
+
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-lg-3">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Avatar" style="width:190px;height:250px;">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <h1>John Doe</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
+                        <?php
+                        } ?>
+
+                    </div><br><br>
+                    <h1 class=" text-gradient">HOA SEN</h1>
+                    <hr>
+                    <div class="row">
+                        <?php
+                        $sql = "SELECT nhh.*,hh.* FROM `nhomhanghoa` nhh JOIN `hanghoa` hh ON hh.MaNhom = nhh.MaNhom WHERE nhh.MaNhom='NDH04' ";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                        ?>
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+
+                                        <div class="flip-card-front">
+                                            <img src="<?php echo $row['Hinh']; ?>" alt="Avatar" style="width:190px;height:250px;">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1><?php echo $row['TenHH']; ?></h1>
+                                            <p><?php echo $row['MaNhom']; ?></p>
+                                            <p><?php echo $row['Gia']; ?></p>
+                                            <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php?MSHH=<?php echo $row['MSHH']; ?>"><i class="fa fa-shopping-cart"></i></a></button>
+
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-sm-12 col-lg-3">
-                            <div class="flip-card">
-                                <div class="flip-card-inner">
-                                    <div class="flip-card-front">
-                                        <img src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Avatar" style="width:190px;height:250px;">
-                                    </div>
-                                    <div class="flip-card-back">
-                                        <h1>John Doe</h1>
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
+                        <?php
+                        } ?>
+
+                    </div><br><br>
+                    <h1 class=" text-gradient">HOA HƯỚNG DƯƠNG</h1>
+                    <hr>
+                    <div class="row">
+                        <?php
+                        $sql = "SELECT nhh.*,hh.* FROM `nhomhanghoa` nhh JOIN `hanghoa` hh ON hh.MaNhom = nhh.MaNhom WHERE nhh.MaNhom='NDH05' ";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                        ?>
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+
+                                        <div class="flip-card-front">
+                                            <img src="<?php echo $row['Hinh']; ?>" alt="Avatar" style="width:190px;height:250px;">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1><?php echo $row['TenHH']; ?></h1>
+                                            <p><?php echo $row['MaNhom']; ?></p>
+                                            <p><?php echo $row['Gia']; ?></p>
+                                            <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php?MSHH=<?php echo $row['MSHH']; ?>"><i class="fa fa-shopping-cart"></i></a></button>
+
+                                        </div>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div><br>
+                        <?php
+                        } ?>
 
+                    </div><br><br>
+                    <h1 class=" text-gradient">HOA KHÁC</h1>
+                    <hr>
+                    <div class="row">
+                        <?php
+                        $sql = "SELECT nhh.*,hh.* FROM `nhomhanghoa` nhh JOIN `hanghoa` hh ON hh.MaNhom = nhh.MaNhom WHERE nhh.MaNhom='NDH06' ";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                        ?>
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+
+                                        <div class="flip-card-front">
+                                            <img src="<?php echo $row['Hinh']; ?>" alt="Avatar" style="width:190px;height:250px;">
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <h1><?php echo $row['TenHH']; ?></h1>
+                                            <p><?php echo $row['MaNhom']; ?></p>
+                                            <p><?php echo $row['Gia']; ?></p>
+                                            <button class="floating-button"><a href="/quanlybanhangltw/frontend/Shop.php?MSHH=<?php echo $row['MSHH']; ?>"><i class="fa fa-shopping-cart"></i></a></button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        <?php
+                        } ?>
+
+                    </div><br><br>
 
                 </div>
             </div>

@@ -1,177 +1,44 @@
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="tab">
-                <h1 class=" text-gradient">HOA MỚI NHẤT</h1>
-                <br>
-            </div>
-        </div>
-    </div>
-</div><br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="tab">
-                <div class="grid-image">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="" class="image-item" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="" class="image-item" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80" alt="" class="image-item" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1523224042829-4731dd15a3bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="" class="image-item" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1495231916356-a86217efff12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=976&q=80" alt="" class="image-item" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1494271823928-a80211877d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="" class="image-item" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <button class="gradient-button"><a href="/quanlybanhangltw/frontend/Shop.php">ĐẶT HÀNG</a></button>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
-</div>
-<br>
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="tab">
-                <h1 class=" text-gradient">HOA PHỔ BIẾN</h1>
-                <br>
-            </div>
-        </div>
-    </div>
-</div><br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="tab">
-                <div class="grid-image1">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1471899236350-e3016bf1e69e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="" class="image-item1" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1516205651411-aef33a44f7c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="" class="image-item1" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80" alt="" class="image-item1" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1523224042829-4731dd15a3bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="" class="image-item1" />
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1495231916356-a86217efff12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=976&q=80" alt="" class="image-item1" />
+<?php
+// 1. Include file cấu hình kết nối đến database, khởi tạo kết nối $conn
+include_once(__DIR__ . '/config.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
 
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br><br>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css"> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <!-- <script src="/vendor/bootstrap/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script> -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous" />
+  <link rel="stylesheet" href="/quanlybanhangltw/frontend/css/Gird-Img2.css">
+  <link rel="stylesheet" href="/quanlybanhangltw/frontend/css/text-gradient.css">
+  <link rel="stylesheet" href="/quanlybanhangltw/frontend/css/button-gradient.css">
+  <link rel="stylesheet" href="/quanlybanhangltw/frontend/css/floating-button.css">
+  <link rel="stylesheet" href="/quanlybanhangltw/frontend/css/simple-tag.css">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="container">
-                <div class="row">
+<script src="/quanlybanhangltw/frontend/js/simple-tag.js" type="text/javascript"></script>
+<style>
+body{
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+</style>
 
-                    <div class="col-md-12">
-                        <div class="tab">
+</head>
 
-                            <h1 class=" text-gradient">HOA PHỔ BIẾN</h1>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div class="tab">
+<body>
+  <?php include_once 'header.php'; ?>
+  <br>
+  <?php include_once 'home.php'; ?>
+  <br>
+  <?php include_once 'footer.php'; ?>
 
-                <div class="tab-list">
-                    <div class="tab-item active" data-tab="1">Popular</div>
-                    <div class="tab-item" data-tab="2">Bali</div>
-                    <div class="tab-item" data-tab="3">New York</div>
-                </div>
-                <div class="tab-wrapper">
-                    <div class="tab-content active" data-tab="1">
-                        <div class="post">
-                            <img src="https://images.unsplash.com/photo-1494271823928-a80211877d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="outer space" class="post-image" />
-                            <div class="post-info">
-                                <span class="post-category">Beach</span>
-                                <h3 class="post-title">Cabo San Lucas, Mexico</h3>
-                                <button class="gradient-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-content" data-tab="2">
-                        <div class="post">
-                            <img src="https://images.unsplash.com/photo-1494271823928-a80211877d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="unicorn" class="post-image" />
-                            <div class="post-info">
-                                <span class="post-category">Unicorn</span>
-                                <h3 class="post-title">Cabo San Lucas, Mexico</h3>
-                                <button class="gradient-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-content" data-tab="3">
-                        <div class="post">
-                            <img src="https://images.unsplash.com/photo-1494271823928-a80211877d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="rachelizmarvel" class="post-image" />
-                            <div class="post-info">
-                                <span class="post-category">Hawaii</span>
-                                <h3 class="post-title">Cabo San Lucas, Mexico</h3>
-                                <button class="gradient-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+</body>
 
-        <div class="col-md-6">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-12">
-                        <div class="tab">
-
-                            <h1 class=" text-gradient">HOA PHỔ BIẾN</h1>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-            </div>
-            <div class="tab">
-                <div class="tab-list">
-                    <div class="tab-item active" data-tab="4">Popular</div>
-                    <div class="tab-item" data-tab="5">Bali</div>
-                    <div class="tab-item" data-tab="6">New York</div>
-                </div>
-                <div class="tab-wrapper">
-                    <div class="tab-content active" data-tab="4">
-                        <div class="post">
-                            <img src="https://images.unsplash.com/photo-1494271823928-a80211877d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="outer space" class="post-image" />
-                            <div class="post-info">
-                                <span class="post-category">Beach</span>
-                                <h3 class="post-title">Cabo San Lucas, Mexico</h3>
-                                <button class="gradient-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-content" data-tab="5">
-                        <div class="post">
-                            <img src="https://images.unsplash.com/photo-1494271823928-a80211877d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="unicorn" class="post-image" />
-                            <div class="post-info">
-                                <span class="post-category">Unicorn</span>
-                                <h3 class="post-title">Cabo San Lucas, Mexico</h3>
-                                <button class="gradient-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-content" data-tab="6">
-                        <div class="post">
-                            <img src="https://images.unsplash.com/photo-1494271823928-a80211877d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="rachelizmarvel" class="post-image" />
-                            <div class="post-info">
-                                <span class="post-category">Hawaii</span>
-                                <h3 class="post-title">Cabo San Lucas, Mexico</h3>
-                                <button class="gradient-button"><a href="/quanlybanhangltw/frontend/Shop.php"><i class="fa fa-shopping-cart"></i></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</html>
