@@ -1,19 +1,18 @@
-  
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" font-size: 20px;">
-        <a class="navbar-brand" href="/quanlybanhangltw/frontend/layout.php"><img src="/quanlybanhangltw/frontend/img/logo1.png" alt="" ></a>
+          <a class="navbar-brand" href="/quanlybanhangltw/frontend/index.php"><img src="/quanlybanhangltw/frontend/img/logo1.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" style=" font-size: 20px;"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="/quanlybanhangltw/frontend/layout.php"> <i class="fa fa-fw fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/quanlybanhangltw/frontend/index.php"> <i class="fa fa-fw fa-home"></i> Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+                <a class="nav-link" href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
               </li>
               <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
